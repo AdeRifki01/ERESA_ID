@@ -10,4 +10,8 @@ Route::get('/price', fn() => view('price'))->name('price');
 Route::get('/rebootcom', fn() => view('rebootcom'))->name('rebootcom');
 
 
-Route::get('/login', fn() => view('auth.login'));
+Route::match(['get', 'post'], '/login', fn() => view('auth.login'))->name('login');
+Route::get('/logout', fn() => view('auth.logout'))->name('logout');
+Route::get('/dashboard', fn() => view('admin.dashboard'))->name('dashboard');
+Route::get('/paket', fn() => view('admin.paket'))->name('paket');
+Route::get('/pesan', fn() => view('admin.pesan'))->name('pesan');

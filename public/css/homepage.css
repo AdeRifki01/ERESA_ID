@@ -1,0 +1,186 @@
+section {
+    padding: 80px 0;
+}
+
+/* LOGO CLIENT */
+.logo-wrapper {
+    overflow: hidden;
+}
+
+.logo-track {
+    display: flex;
+    gap: 60px;
+    animation: scrollLogo 20s linear infinite;
+}
+
+/* .logo-track img {
+    height: 250px;
+    object-fit: contain;
+} */
+.logo-track img {
+    height: 70px;
+}
+.portfolio-row {
+    overflow: hidden;
+}
+
+.portfolio-track .d-flex {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+}
+
+/* CARD */
+.portfolio-row .item {
+    flex: 0 0 auto;
+    width: 180px;
+}
+
+/* ANIMASI PORTOFOLIO */
+.portfolio-row.left .d-flex {
+    animation: slideLeft 30s linear infinite;
+}
+
+.portfolio-row.right .d-flex {
+    animation: slideRight 30s linear infinite;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ANIMASI SCROLL LOGO CLIENT */
+@keyframes scrollLogo {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* DEKSTOP */
+.portfolio-row .item {
+    flex: 0 0 auto;
+    width: 250px; /* desktop */
+}
+
+.portfolio-row img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+    section {
+        padding: 60px 0;
+    }
+    .portfolio-row .item {
+        flex: 0 0 auto;
+        width: 140px; /* tablet */
+    }
+
+    .portfolio-row img {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .portfolio-track .d-flex {
+        gap: 12px;
+    }
+
+    .logo-track img {
+        height: 55px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    section {
+        padding: 40px 0;
+    }
+
+    .portfolio-row .item {
+        flex: 0 0 auto;
+        width: 110px; /* mobile */
+    }
+
+    .portfolio-row img {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .portfolio-track .d-flex {
+        gap: 10px;
+    }
+
+    .logo-track img {
+        height: 45px;
+    }
+
+    /* OPTIONAL: pelanin animasi biar nyaman */
+    .portfolio-row.left .d-flex,
+    .portfolio-row.right .d-flex {
+        animation-duration: 35s;
+    }
+}
+
+/* --- ANIMASI SEDERHANA --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.anim-fade-up {
+    animation: fadeInUp 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+    opacity: 0;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.anim-floating {
+    animation: floating 3s ease-in-out infinite;
+}

@@ -6,6 +6,6 @@ session_unset();
 session_destroy();
 
 // Arahkan ke login admin (BUKAN ke website)
-header("Location: /eresa/auth/login.php?logout=success");
+header("Location: " . route('login') . "?logout=success");
 exit;
 ?>`

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="shortcut icon" href="{{ asset('img/eresa/Logo_putih.png') }}" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
     <title>Home - eresa.id</title>
@@ -25,7 +25,7 @@
             </p>
 
             <div class="anim-fade-up delay-2 mt-4">
-                <a href="price.php" class="fw-bold btn btn-outline-light rounded px-4 anim-floating d-inline-block">
+                <a href="{{ route('price') }}" class="fw-bold btn btn-outline-light rounded px-4 anim-floating d-inline-block">
                     AYO AMBIL PAKET
                 </a>
             </div>
@@ -220,17 +220,24 @@
                         <!-- BARIS 1 -->
                         <div class="portfolio-row left mt-4">
                             <div class="portfolio-track">
-                                <div class="row g-3 flex-nowrap">
-                                    <!-- BARIS 1 -->
-                                    <div class="col-4"><img src="{{ asset('img/portofolio/Porto_1.webp') }}" class="img-fluid rounded"></div>
-                                    <div class="col-4"><img src="{{ asset('img/portofolio/Porto_2.webp') }}" class="img-fluid rounded"></div>
-                                    <div class="col-4"><img src="{{ asset('img/portofolio/Porto_3.jpg') }}" class="img-fluid rounded"></div>
+                                <div class="d-flex">
 
-                                    <!-- DUPLIKAT BARIS 1 -->
-                                    <div class="col-4"><img src="{{ asset('img/portofolio/Porto_4.jpg') }}" class="img-fluid rounded"></div>
-                                    <div class="col-4"><img src="{{ asset('img/portofolio/Porto_5.jpg') }}" class="img-fluid rounded"></div>
-                                    <div class="col-4"><img src="{{ asset('img/portofolio/Porto_6.jpg') }}" class="img-fluid rounded"></div>
-                                    <div class="col-4"><img src="{{ asset('img/portofolio/Porto_7.jpg') }}" class="img-fluid rounded"></div>
+                                    <!-- SET ASLI -->
+                                    <div class="item"><img src="{{ asset('img/portofolio/Porto_1.webp') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/portofolio/Porto_2.webp') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/portofolio/Porto_3.jpg') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/portofolio/Porto_4.jpg') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/portofolio/Porto_5.jpg') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/portofolio/Porto_6.jpg') }}"></div>
+
+                                    <!-- DUPLIKAT (WAJIB BIAR SMOOTH) -->
+                                    <div class="item"><img src="{{ asset('img/portofolio/Porto_1.webp') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/portofolio/Porto_2.webp') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/portofolio/Porto_3.jpg') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/portofolio/Porto_4.jpg') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/portofolio/Porto_5.jpg') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/portofolio/Porto_6.jpg') }}"></div>
+
                                 </div>
                             </div>
                         </div>
@@ -238,21 +245,29 @@
                         <!-- BARIS 2 -->
                         <div class="portfolio-row right mt-3">
                             <div class="portfolio-track">
-                                <div class="row g-3 flex-nowrap">
-                                    <!-- BARIS 2 -->
-                                    <div class="col-4"><img src="{{ asset('img/produk/almaz1.png') }}" class="img-fluid rounded"></div>
-                                    <div class="col-4"><img src="{{ asset('img/produk/jamuin1.png') }}" class="img-fluid rounded"></div>
-                                    <div class="col-4"><img src="{{ asset('img/produk/reboot1.png') }}" class="img-fluid rounded"></div>
+                                <div class="d-flex">
 
-                                    <!-- DUPLIKAT BARIS 2 -->
-                                    <div class="col-4"><img src="{{ asset('img/produk/almaz2.png') }}" class="img-fluid rounded"></div>
-                                    <div class="col-4"><img src="{{ asset('img/produk/jamuin2.png') }}" class="img-fluid rounded"></div>
-                                    <div class="col-4"><img src="{{ asset('img/produk/reboot2.png') }}" class="img-fluid rounded"></div>
+                                    <!-- SET ASLI -->
+                                    <div class="item"><img src="{{ asset('img/produk/almaz1.png') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/produk/jamuin1.png') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/produk/reboot1.png') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/produk/almaz2.png') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/produk/jamuin2.png') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/produk/reboot2.png') }}"></div>
+
+                                    <!-- DUPLIKAT -->
+                                    <div class="item"><img src="{{ asset('img/produk/almaz1.png') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/produk/jamuin1.png') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/produk/reboot1.png') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/produk/almaz2.png') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/produk/jamuin2.png') }}"></div>
+                                    <div class="item"><img src="{{ asset('img/produk/reboot2.png') }}"></div>
+
                                 </div>
                             </div>
                         </div>
                         <div class="mt-5">
-                            <a href="portofolio.php" class="btn btn-dark px-10 py-2 shadow-sm">See All Portfolio</a>
+                            <a href="{{ route('portofolio') }}" class="btn btn-dark px-10 py-2 shadow-sm">See All Portfolio</a>
                         </div>
                     </div>
                 </div>

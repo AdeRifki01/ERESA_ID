@@ -63,9 +63,12 @@ style="
                     <a href="{{ route('contact') }}" class="nav-link text-light">Contact</a>
                 </li>
                 <!-- <li class="nav-item">
-                    <a href="/eresa/admin/dashboard.php" class="nav-link text-warning">Admin 👤</a>
+                    <a href="{{ route('dashboard') }}" class="nav-link text-warning">Admin 👤</a>
                 </li> -->
             </ul>
         </div>
     </div>
 </nav>
+
+<!-- js bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
