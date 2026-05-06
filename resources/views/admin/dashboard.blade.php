@@ -15,7 +15,7 @@
 
 // WAKTU TARUH DI SINI waktu.php
     //require '../../auth/waktu.php'; // sesuaikan path!
-    require resource_path('views/auth/waktu.blade.php');
+    require $_SERVER['DOCUMENT_ROOT'] . '/eresa/auth/waktu.php';
     $waktu = getWaktu();
     
     $current = basename($_SERVER['PHP_SELF']);
@@ -45,7 +45,7 @@
         <div class="row">
 
 <!-- SIDEBAR -->
-@include('components.sideBar')
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/eresa/components/sidebar.php'; ?>
 
 <!-- MAIN CONTENT -->
             <div class="col-md-10 p-2">

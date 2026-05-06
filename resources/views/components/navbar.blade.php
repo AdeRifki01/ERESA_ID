@@ -14,7 +14,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
     bottom: 5px;
     width: 0%;
     height: 2px;
-    background-color: #ffffff;
+    background-color: #ffffff85;
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -68,7 +68,4 @@ style="
             </ul>
         </div>
     </div>
-</nav>
-
-<!-- js bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</nav>      
