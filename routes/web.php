@@ -9,3 +9,5 @@ Route::get('/portofolio', fn() => view('portofolio'))->name('portofolio');
 Route::get('/price', fn() => view('price'))->name('price');
 Route::get('/rebootcom', fn() => view('rebootcom'))->name('rebootcom');
 
+
+Route::get('/login', fn() => view('auth.login'));
