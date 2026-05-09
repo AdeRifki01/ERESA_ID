@@ -1,0 +1,295 @@
+/* ROOT VARIABLES */
+:root {
+    --primary-blue: #3d86f6;
+    --dark-blue: #1e5bb8;
+    --soft-blue: #f0f5ff;
+}
+
+/* Background Section */
+.pricing-section {
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+/* Header dengan Efek Blur Dekoratif */
+.pricing-header {
+    background: linear-gradient(135deg, #3d86f6 0%, #1e5bb8 100%);
+    padding: 100px 20px 250px;
+    border-radius: 40px;
+    margin: 20px;
+    position: relative;
+}
+
+/* Elemen Dekoratif Glassmorphism di Belakang */
+.pricing-header::before,
+.pricing-header::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(50px);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.pricing-header::before {
+    top: -50px;
+    left: -50px;
+}
+.pricing-header::after {
+    bottom: -50px;
+    right: -100px;
+}
+
+/* Pricing Wrapper */
+.pricing-wrapper {
+    margin-top: -180px; /* Menaikkan kartu lebih tinggi ke area biru */
+    position: relative;
+    z-index: 5;
+}
+
+/* WRAPPER & GRID */
+.pricing-wrapper {
+    margin-top: -120px;
+}
+
+/* Modern Card Style */
+.price-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 35px; /* Lebih membulat sesuai gambar */
+    padding: 40px 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+/* Icon Bulat Kecil di Atas Judul */
+.plan-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.price-card h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--dark-text);
+}
+
+.price-card .amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 15px 0;
+    color: var(--dark-text);
+}
+
+.price-card .amount span {
+    font-size: 1rem;
+    color: #a0a0a0;
+    font-weight: 400;
+}
+
+.price-card p.description {
+    font-size: 0.85rem;
+    color: #7a7a7a;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* List Style dengan Icon Biru Bulat */
+.price-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 35px;
+}
+
+.price-list li {
+    font-size: 0.9rem;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.price-list li i {
+    width: 22px;
+    height: 22px;
+    background: var(--soft-blue);
+    color: var(--primary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    margin-right: 12px;
+}
+
+/* Retail Section Grid */
+.retail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+/* Button Minimalis */
+.btn-get-started {
+    border: 2px solid #e0e0e0;
+    color: var(--primary-blue);
+    font-weight: 700;
+    border-radius: 50px;
+    padding: 12px;
+    transition: 0.3s;
+    background: transparent;
+}
+
+.price-card.highlight .btn-get-started {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: white;
+}
+
+.btn-get-started:hover {
+    background: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+
+/* HOVER SEMUA SAMA */
+.price-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(45, 93, 179, 0.15);
+}
+
+.price-card.highlight {
+    border: 2px solid var(--primary-blue);
+    background: linear-gradient(to bottom, #ffffff, #fcfdff);
+    transform: scale(1.05); /* Sedikit lebih besar dari yang lain */
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .price-card.highlight {
+        transform: scale(1);
+        margin: 20px 0;
+    }
+}
+
+/* TYPOGRAPHY */
+.price-card h5 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+}
+
+.price-card h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+}
+
+.price-card h3 span {
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+/* LIST STYLES */
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+    flex-grow: 1; /* Mendorong tombol ke bawah agar sejajar */
+}
+
+.price-card ul li {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.price-card ul li i {
+    color: var(--primary-blue);
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+/* RETAIL SECTION */
+.retail-title {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    color: var(--dark-blue);
+}
+
+.retail-card {
+    padding: 25px;
+    border-radius: 18px;
+    background: white;
+    text-align: center;
+    border: 1px solid #edf2f7;
+}
+
+.retail-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* BUTTONS */
+.btn-select {
+    padding: 12px 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+
+.highlight {
+    border: 2px solid #2d5db3;
+}
+
+/* TEXT */
+.price-card h3 {
+    font-weight: bold;
+    margin: 15px 0;
+}
+.price-card h3 span {
+    font-size: 12px;
+    color: gray;
+}
+
+/* LIST */
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+.price-card ul li {
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+.btn-primary {
+    background: #2d5db3;
+    border: none;
+}

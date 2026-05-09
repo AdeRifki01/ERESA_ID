@@ -1,0 +1,212 @@
+.footer-agency {
+    background: #f8f8f8;
+    padding-top: 70px;
+    padding-bottom: 0;
+    color: #000000;
+}
+
+.footer-main {
+    padding-bottom: 70px;
+}
+
+/* ===== FOOTER MAIN ===== */
+
+.footer-logo {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.footer-desc {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    font-size: 15px;
+}
+
+/* ===== SOCIAL ===== */
+.footer-social {
+    display: flex;
+    gap: 14px;
+}
+
+.footer-social a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-decoration: none;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+
+    transition: 0.3s ease;
+}
+
+/* Facebook */
+.footer-social a:nth-child(1):hover {
+    background: #1877f2;
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* Instagram */
+.footer-social a:nth-child(2):hover {
+    background: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+    );
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* TikTok */
+.footer-social a:nth-child(3):hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-4px);
+}
+
+/* ===== MENU ===== */
+
+.footer-main h5 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* Pastikan list tidak memiliki margin/padding bawaan yang menggeser posisi */
+.footer-main ul {
+    padding-left: 0 !important;
+    list-style: none;
+    display: inline-block; /* Agar list bisa mengikuti alignment induknya */
+    text-align: center;
+}
+
+.footer-main ul li {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.footer-title-link {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: #111; /* Warna hitam seperti judul lainnya */
+    font-weight: 700; /* Membuat teks tebal */
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-title-link:hover {
+    color: #3d86f6; /* Berubah warna saat kursor di atasnya */
+}
+
+.footer-main ul li a {
+    text-decoration: none;
+    color: #666;
+    transition: 0.3s ease;
+    line-height: 1.7;
+}
+
+.footer-main ul li a:hover {
+    color: #3d86f6;
+    padding-left: 4px;
+}
+
+.footer-main .row {
+    align-items: flex-start;
+}
+
+/* ===== MAPS ===== */
+
+.footer-map iframe {
+    width: 100%;
+    height: 260px;
+    margin-top: -5px;
+    border: 0;
+    border-radius: 18px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== COPYRIGHT ===== */
+
+.footer-bottom {
+    background: #3d86f6;
+    padding: 18px 0;
+    text-align: center;
+    margin-top: 0;
+}
+.footer-bottom p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* Untuk tampilan desktop tetap rata kiri */
+@media (min-width: 992px) {
+    .footer-main h5,
+    .footer-main ul,
+    .footer-logo,
+    .footer-desc {
+        text-align: left !important;
+    }
+    .footer-social {
+        justify-content: flex-start !important;
+    }
+}
+
+/* Menyesuaikan jarak ikon agar tetap rapi */
+.footer-main ul li a i {
+    font-size: 0.9rem; /* Ukuran ikon sedikit lebih kecil dari teks agar proporsional */
+    opacity: 0.8;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 991px) {
+    /* Memastikan ikon dan teks tetap satu baris di tengah pada mobile */
+    .footer-main ul li a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Memberi jarak antar kolom agar tidak dempet */
+    .footer-main .col-6 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* Memastikan teks tetap center di dalam kolomnya masing-masing */
+    .footer-main h5,
+    .footer-main ul,
+    .footer-logo,
+    .footer-desc {
+        text-align: center !important;
+    }
+
+    /* Hilangkan padding kiri pada UL agar tidak mendorong teks ke kanan */
+    .footer-main ul {
+        padding-left: 0 !important;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .footer-social {
+        justify-content: center !important;
+        margin-bottom: 20px;
+    }
+
+    .footer-title-link {
+        justify-content: center; /* Tetap di tengah pada tampilan mobile */
+        width: 100%;
+    }
+}

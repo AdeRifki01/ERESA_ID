@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+	<!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootstrap Icon -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<!-- JS Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="shortcut icon" href="{{ asset('img/eresa/Logo_putih.png') }}" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../css/portofolio.css">
-    <title>Portofolio - eresa.id</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('css/testnavbar.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/testfooter.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/portofolio.css') }}">
+
+    <!-- Judul Halaman -->
+    <title>Portofolio - Eresa.id</title>
 </head>
 <body>
 <!-- NAVBAR -->
-    {{ view('components.navbar') }}
-    <h1>PORTOFOLIO ERESA</h1>
+    <x-testnavbar />
 
 <!-- GALLERY -->
-    <section class="bg-light d-flex align-items-center" style="min-height:100vh; padding-top:20px;">
+    <section class="bg-light d-flex align-items-center" style="min-height:100vh; padding-top:1px;">
         <div class="container" style="margin-top:100px;">
             <h2 class="text-center fw-bold mb-4">Gallery</h2>
 <!-- FILTER BUTTON -->
@@ -171,7 +179,6 @@
         <div class="container mt-5">
             <h5 class="text-center fw-bold mb-4">Reels</h5>
                 <div class="row justify-content-center g-4">
-                    
                 <!-- REEL 1 -->
                     <div class="col-md-4 col-lg-3">
                         <div class="ratio" style="aspect-ratio:9/16; border-radius:12px; overflow:hidden;">
@@ -185,7 +192,7 @@
                     <div class="col-md-4 col-lg-3">
                         <div class="ratio" style="aspect-ratio:9/16; border-radius:12px; overflow:hidden;">
                             <video controls style="object-fit:cover;">
-                                <source src="/img/video/video_Eresa2.mp4" type="video/mp4">
+                                <source src="/img/video/video_Eresa3.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -194,7 +201,7 @@
                     <div class="col-md-4 col-lg-3">
                         <div class="ratio" style="aspect-ratio:9/16; border-radius:12px; overflow:hidden;">
                             <video controls style="object-fit:cover;">
-                                <source src="/img/video/video_Eresa3.mp4" type="video/mp4">
+                                <source src="/img/video/video_Eresa2.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
@@ -203,7 +210,7 @@
     </div>
 
 <!-- FOOTER -->
-	{{ view('components.footer') }}
+	<x-testfooter />
 
 <!-- SCRIPT -->
     <script>

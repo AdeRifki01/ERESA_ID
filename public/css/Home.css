@@ -5,20 +5,18 @@ section {
 /* LOGO CLIENT */
 .logo-wrapper {
     overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
 }
 
 .logo-track {
     display: flex;
     gap: 60px;
-    animation: scrollLogo 20s linear infinite;
+    animation: scrollLogo 15s linear infinite;
 }
 
-/* .logo-track img {
-    height: 250px;
-    object-fit: contain;
-} */
 .logo-track img {
-    height: 70px;
+    height: 100px;
 }
 .portfolio-row {
     overflow: hidden;
@@ -87,10 +85,30 @@ section {
 }
 
 /* TABLET */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     section {
         padding: 60px 0;
     }
+
+    .slogan {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 12px;
+        margin-left: 130px;
+        margin-right: 130px;
+        margin-bottom: 30px;
+    }
+
+    .button-paket a {
+        font-size: 12px;
+    }
+
+    .penawaran p {
+        font-size: 14px;
+    }
+
     .portfolio-row .item {
         flex: 0 0 auto;
         width: 140px; /* tablet */
@@ -116,6 +134,18 @@ section {
 @media (max-width: 576px) {
     section {
         padding: 40px 0;
+    }
+
+    .slogan {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .button-paket a {
+        font-size: 10px;
     }
 
     .portfolio-row .item {

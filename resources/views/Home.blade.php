@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{ asset('img/eresa/Logo_putih.png') }}" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
-    <title>Home - eresa.id</title>
+	<!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootstrap Icon -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<!-- JS Bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('css/testnavbar.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/testfooter.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/Home.css') }}">
+
+    <!-- Judul Halaman -->
+    <title>Home - Eresa.id</title>
 </head>
 <body>
-<!-- NAVBAR -->
-    {{ view('components.navbar') }}
-
+<!-- Navbar -->
+    <x-testnavbar />
+    
 <!-- HERO -->
     <section class="d-flex align-items-center text-white text-center"
         style="height:100vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         url('{{ asset('img/eresa/ID_landscape.png') }}'); background-size: cover; background-position: center;">
 
         <div class="container">
-            <h4 class="anim-fade-up" style="padding-top:210px;">We Make Your Company Take Off</h4>
-            <p class="mt-3 anim-fade-up delay-1">
+            <h4 class="slogan anim-fade-up" style="padding-top:180px;">We Make Your Company Take Off</h4>
+            <p class="description mt-3 anim-fade-up delay-1">
                 Transformasi brand melalui strategi Social Media yang tajam dan Website performa tinggi yang scalable
             </p>
 
-            <div class="anim-fade-up delay-2 mt-4">
+            <div class="button-paket anim-fade-up delay-2 mt-4">
                 <a href="{{ route('price') }}" class="fw-bold btn btn-outline-light rounded px-4 anim-floating d-inline-block">
                     AYO AMBIL PAKET
                 </a>
@@ -35,7 +43,7 @@
 <!-- PENAWARAN -->
     <section class="py-5 text-center">
         <div class="container">
-            <h2 class="fw-bold">"Bagaimana Kami Bisa Membantu Anda?"</h2>
+            <h2 class="penawaran fw-bold">"Bagaimana Kami Bisa Membantu Anda?"</h2>
             <p>Lupakan kerumitan teknis dan algoritma. Fokuslah pada visi Anda,<br>
             biarkan tim ahli kami yang mengurus eksekusi digitalnya.</p>
             <div class="mt-4">
@@ -286,7 +294,7 @@
             </p>
 
 <!-- LOGO CLIENT -->
-            <div class="logo-wrapper mt-5">
+            <div class="logo-wrapper mt-10">
                 <div class="logo-track">
 
                     <img src="{{ asset('img/brand/Almaz.png') }}">
@@ -320,24 +328,23 @@
             <h2 class="fw-bold text-primary">
                 Punya Ide Besar? Mari Kita Wujudkan Bersama
             </h2>
-
             <p class="text-muted mt-3">
                 Jangan simpan rencana hebat Anda sendirian. Diskusikan visi bisnis Anda dengan tim ahli kami 
                 dan lihat bagaimana kami mengubahnya menjadi realitas digital yang berdampak luas.
             </p>
-            
-            <a href="contact.php" class="fw-bold btn btn-outline-primary mt-3 rounded px-4">
-                📅 BOOK A MEETING
-            </a>
         </div>
     </section>
 
-<!-- FOOTER -->
-    {{ view('components.footer') }}
-
-<!-- SCRIPT -->
+<!-- Footer -->
+	<x-testfooter />
     <script>
-        let index = 0;
+
+    window.addEventListener('scroll', function(){
+        const navbar = document.getElementById('mainNavbar');
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    let index = 0;
         const track = document.getElementById("portfolioTrack");
         const totalSlides = document.querySelectorAll(".portfolio-slide").length;
 
@@ -350,7 +357,6 @@
 
             track.style.transform = `translateX(-${index * 100}%)`;
         }, 3000);
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></h1>
+</script>
 </body>
 </html>
