@@ -11,8 +11,8 @@
 	<!-- JS Bootstrap -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 	<!-- Custom CSS -->
-
-	<link rel="stylesheet" href="{{ asset('css/testfooter.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/Home.css') }}">
 
     <!-- Judul Halaman -->

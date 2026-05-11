@@ -16,8 +16,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('css/testnavbar.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/testfooter.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/price.css') }}">
 
     <!-- Judul Halaman -->
@@ -28,7 +28,7 @@
     <x-navbar />
 
 <!-- HEADER & PAKET UTAMA -->
-<section class="pricing-hero" id="utama">
+<section class="pricing-hero">
     <div class="pricing-header text-center">
         <div class="container" data-aos="fade-up">
             <h1 class="mb-3">Simple, Transparent Pricing</h1>
@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="utama">
         <!-- 1. PAKET UTAMA (Monthly) -->
         <div class="row justify-content-center pricing-wrapper g-4">
             <!-- REGULER -->
