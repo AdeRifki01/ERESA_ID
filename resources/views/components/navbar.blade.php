@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg custom-navbar fixed-top">
+<nav class="navbar navbar-expand-lg custom-navbar fixed-top" style="font-family: 'Poppins', sans-serif;">
     <div class="container">
 
         <!-- Logo -->
@@ -44,4 +44,4 @@
     </div>
 </nav>
 
-<link rel="stylesheet" href="{{ asset('css/testnavbar.css') }}">
+<link rel="stylesheet" href="{{ asset('css/navbar.css') }}">

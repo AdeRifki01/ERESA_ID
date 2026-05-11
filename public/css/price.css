@@ -1,295 +1,546 @@
-/* ROOT VARIABLES */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #1e293b;
+}
+
 :root {
     --primary-blue: #3d86f6;
     --dark-blue: #1e5bb8;
     --soft-blue: #f0f5ff;
+    --orange-accent: #3d86f6;
+    --dark-bg: #121826;
+    --light-gray: #f8fafc;
 }
 
-/* Background Section */
-.pricing-section {
+/* Background Sections */
+.pricing-hero {
     background-color: #ffffff;
     position: relative;
     overflow: hidden;
     padding-bottom: 100px;
 }
 
-/* Header dengan Efek Blur Dekoratif */
+.retail-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.retail-section.bg-light {
+    background-color: var(--light-gray) !important;
+}
+
+/* Header Hero Style (Light) */
 .pricing-header {
-    background: linear-gradient(135deg, #3d86f6 0%, #1e5bb8 100%);
-    padding: 100px 20px 250px;
-    border-radius: 40px;
-    margin: 20px;
+    background: linear-gradient(180deg, #3d86f6 0%, #ffffff 100%);
+    padding: 120px 0 100px 0;
+    margin: 0;
+    border-radius: 0 0 50px 50px;
     position: relative;
 }
 
-/* Elemen Dekoratif Glassmorphism di Belakang */
-.pricing-header::before,
-.pricing-header::after {
-    content: "";
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(50px);
-    border-radius: 50%;
-    z-index: 0;
+.pricing-header h1 {
+    color: #0f172a;
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: -2px;
 }
 
-.pricing-header::before {
-    top: -50px;
-    left: -50px;
-}
-.pricing-header::after {
-    bottom: -50px;
-    right: -100px;
+.pricing-header p {
+    color: #475569;
+    font-size: 1.15rem;
 }
 
-/* Pricing Wrapper */
+/* Navigation Pills */
+.nav-pricing {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.btn-nav-price {
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #475569;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-nav-price:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.btn-nav-price.active {
+    background: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+    box-shadow: 0 10px 20px rgba(61, 134, 246, 0.2);
+}
+
+/* Pricing Wrapper Adjustments */
 .pricing-wrapper {
-    margin-top: -180px; /* Menaikkan kartu lebih tinggi ke area biru */
+    margin-top: 40px;
     position: relative;
     z-index: 5;
-}
-
-/* WRAPPER & GRID */
-.pricing-wrapper {
-    margin-top: -120px;
 }
 
 /* Modern Card Style */
 .price-card {
     background: #ffffff;
-    border: none;
-    border-radius: 35px; /* Lebih membulat sesuai gambar */
-    padding: 40px 30px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-    transition: all 0.4s ease;
+    border: 1px solid #e2e8f0;
+    border-radius: 30px;
+    padding: 60px 30px 40px;
     height: 100%;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
 }
 
-/* Icon Bulat Kecil di Atas Judul */
-.plan-icon {
-    width: 40px;
-    height: 40px;
+.price-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* Floating Card Label */
+.card-label {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 75%;
     background: var(--primary-blue);
     color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
+    padding: 12px 20px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(61, 134, 246, 0.3);
+    z-index: 10;
+}
+
+.price-card.highlight {
+    background: var(--primary-blue);
+    border: none;
+    color: white;
+    transform: scale(1.05);
+    z-index: 5;
+    background-image: none;
+}
+
+.price-card.highlight .card-label {
+    background: #ffffff;
+    color: var(--primary-blue);
+    transform: translateX(-50%) rotate(3deg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.price-card.highlight .plan-subtext,
+.price-card.highlight .price-list li,
+.price-card.highlight .usage-info {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.price-card.highlight .divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.price-card.highlight .price-list i {
+    color: #ffffff;
 }
 
 .price-card h5 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--dark-text);
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: inherit;
+}
+
+.plan-subtext {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+.highlight .plan-subtext {
+    color: #94a3b8;
 }
 
 .price-card .amount {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 800;
-    margin: 15px 0;
-    color: var(--dark-text);
+    margin-bottom: 24px;
+    color: #0f172a;
+    display: flex;
+    align-items: baseline;
+}
+
+.highlight .amount {
+    color: white;
 }
 
 .price-card .amount span {
     font-size: 1rem;
-    color: #a0a0a0;
-    font-weight: 400;
+    color: hwb(215 58% 28%);
+    font-weight: 500;
+    margin-left: 8px;
 }
 
-.price-card p.description {
-    font-size: 0.85rem;
-    color: #7a7a7a;
-    line-height: 1.6;
-    margin-bottom: 25px;
+/* Buttons */
+.btn-price {
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-bottom: 30px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
 }
 
-/* List Style dengan Icon Biru Bulat */
+.btn-outline {
+    background: transparent;
+    border: 1.5px solid #e2e8f0;
+    color: #1e293b;
+}
+
+.btn-outline:hover {
+    background: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.btn-orange {
+    background: var(--orange-accent);
+    color: white;
+    border: none;
+    box-shadow: 0 10px 20px rgba(255, 107, 53, 0.2);
+}
+
+.btn-orange:hover {
+    background: #3d86f6;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 25px rgba(255, 107, 53, 0.3);
+    color: white;
+}
+
+/* Usage Info */
+.usage-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.highlight .usage-info {
+    color: #94a3b8;
+}
+
+/* Feature List */
+.divider {
+    height: 1px;
+    background: #e2e8f0;
+    margin: 0 0 24px 0;
+    border: none;
+    opacity: 1;
+}
+
+.highlight .divider {
+    background: rgba(255, 255, 255, 0.1);
+}
+
 .price-list {
     list-style: none;
     padding: 0;
-    margin-bottom: 35px;
+    margin: 0;
+    text-align: left;
 }
 
 .price-list li {
-    font-size: 0.9rem;
-    color: #4a4a4a;
-    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #475569;
+    margin-bottom: 16px;
     display: flex;
     align-items: center;
+    gap: 12px;
+}
+
+.highlight .price-list li {
+    color: #cbd5e1;
 }
 
 .price-list li i {
-    width: 22px;
-    height: 22px;
-    background: var(--soft-blue);
-    color: var(--primary-blue);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.7rem;
-    margin-right: 12px;
+    color: #94a3b8;
+    font-size: 1rem;
 }
 
-/* Retail Section Grid */
+.highlight .price-list li i {
+    color: #64748b;
+}
+
+/* Popular Badge */
+.badge-popular {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--orange-accent);
+    color: white;
+    padding: 4px 12px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 20;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Retail Section */
 .retail-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     margin-top: 50px;
 }
 
-/* Button Minimalis */
-.btn-get-started {
-    border: 2px solid #e0e0e0;
-    color: var(--primary-blue);
-    font-weight: 700;
-    border-radius: 50px;
-    padding: 12px;
-    transition: 0.3s;
-    background: transparent;
-}
-
-.price-card.highlight .btn-get-started {
-    background: var(--primary-blue);
-    border-color: var(--primary-blue);
-    color: white;
-}
-
-.btn-get-started:hover {
-    background: var(--primary-blue);
-    color: white;
-    border-color: var(--primary-blue);
-}
-
-/* HOVER SEMUA SAMA */
-.price-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 50px rgba(45, 93, 179, 0.15);
-}
-
-.price-card.highlight {
-    border: 2px solid var(--primary-blue);
-    background: linear-gradient(to bottom, #ffffff, #fcfdff);
-    transform: scale(1.05); /* Sedikit lebih besar dari yang lain */
-    z-index: 2;
-}
-
-@media (max-width: 768px) {
-    .price-card.highlight {
-        transform: scale(1);
-        margin: 20px 0;
-    }
-}
-
-/* TYPOGRAPHY */
-.price-card h5 {
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: var(--dark-blue);
-    margin-bottom: 20px;
-}
-
-.price-card h3 {
-    font-size: 1.8rem;
-    font-weight: 800;
-    color: var(--primary-blue);
-}
-
-.price-card h3 span {
-    font-size: 0.85rem;
-    font-weight: 400;
-}
-
-/* LIST STYLES */
-.price-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 25px 0;
-    flex-grow: 1; /* Mendorong tombol ke bawah agar sejajar */
-}
-
-.price-card ul li {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 12px;
-    display: flex;
-    align-items: flex-start;
-}
-
-.price-card ul li i {
-    color: var(--primary-blue);
-    margin-right: 10px;
-    margin-top: 4px;
-}
-
-/* RETAIL SECTION */
-.retail-title {
-    margin-top: 80px;
-    margin-bottom: 40px;
-    color: var(--dark-blue);
-}
-
-.retail-card {
-    padding: 25px;
-    border-radius: 18px;
-    background: white;
+.retail-grid .price-card {
+    padding: 35px 24px;
+    border-radius: 24px;
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
     text-align: center;
-    border: 1px solid #edf2f7;
+    transition: all 0.3s ease;
 }
 
-.retail-card h4 {
-    font-size: 1.1rem;
+.retail-grid .price-card:hover {
+    border-color: var(--primary-blue);
+    background: #fcfdff;
+}
+
+.retail-grid .icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+}
+
+.retail-grid .price-card:hover .icon-box {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Color variations for icon boxes */
+.bg-soft-blue {
+    background: #eff6ff;
+    color: #3b82f6;
+}
+.bg-soft-orange {
+    background: #fff7ed;
+    color: #f97316;
+}
+.bg-soft-purple {
+    background: #faf5ff;
+    color: #a855f7;
+}
+.bg-soft-green {
+    background: #f0fdf4;
+    color: #22c55e;
+}
+.bg-soft-pink {
+    background: #fdf2f8;
+    color: #db2777;
+}
+.bg-soft-indigo {
+    background: #eef2ff;
+    color: #6366f1;
+}
+
+.retail-grid h6 {
+    font-size: 1.2rem;
     font-weight: 700;
-}
-
-/* BUTTONS */
-.btn-select {
-    padding: 12px 20px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn-outline-primary {
-    border: 2px solid var(--primary-blue);
-    color: var(--primary-blue);
-}
-
-.btn-outline-primary:hover {
-    background: var(--primary-blue);
-    color: white;
-}
-
-.highlight {
-    border: 2px solid #2d5db3;
-}
-
-/* TEXT */
-.price-card h3 {
-    font-weight: bold;
-    margin: 15px 0;
-}
-.price-card h3 span {
-    font-size: 12px;
-    color: gray;
-}
-
-/* LIST */
-.price-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-}
-.price-card ul li {
+    color: #0f172a;
     margin-bottom: 10px;
 }
 
-/* BUTTON */
-.btn-primary {
-    background: #2d5db3;
+.retail-grid .price-tag {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.retail-grid p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.retail-grid .btn-price {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* Category Header for Retail Groups */
+.category-header {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.category-header h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.category-header .underline {
+    width: 60px;
+    height: 4px;
+    background: var(--primary-blue);
+    margin: 0 auto 15px;
+    border-radius: 2px;
+}
+
+.category-header p {
+    font-size: 1rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Retail Group Spacing */
+.retail-group {
+    margin-bottom: 40px;
+}
+
+/* New Retail Card Style */
+.retail-grid .price-card.retail-card {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 25px 25px;
     border: none;
+    color: rgb(0, 0, 0);
+    padding: 40px 25px;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.25);
+}
+
+.retail-card .card-badge {
+    background: linear-gradient(to right, #60a5fa, #3b82f6);
+    color: white;
+    padding: 8px 30px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.retail-card .retail-price {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.retail-card .retail-price .rp {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.retail-card .retail-price .num {
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+}
+
+.retail-card .retail-price .cents {
+    font-size: 1.2rem;
+    margin-top: 25px;
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.retail-card .retail-highlight {
+    color: #3d86f6; /* Yellow from image */
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.retail-card .retail-features {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    min-height: 50px;
+    font-weight: 400;
+}
+
+.retail-card .btn-price {
+    background: white;
+    color: #2563eb;
+    border: none;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: auto;
+    transition: all 0.3s ease;
+}
+
+.retail-card .btn-price:hover {
+    background: #f8fafc;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 991px) {
+    .price-card.highlight {
+        transform: scale(1);
+        margin: 40px 0;
+    }
+    .price-card.highlight:hover {
+        transform: translateY(-10px);
+    }
 }

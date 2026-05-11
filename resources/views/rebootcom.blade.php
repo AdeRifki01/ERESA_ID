@@ -20,7 +20,7 @@
 </head>
 <body>
 <!-- Navbar -->
-    <x-testnavbar />
+    <x-navbar />
     
 <!-- MAIN CONTENT -->
     <section class="coming-section d-flex align-items-center">
@@ -42,6 +42,6 @@
     </section>
 
 <!-- FOOTER -->
-	<x-testfooter />
+	<x-footer />
 </body>
 </html>

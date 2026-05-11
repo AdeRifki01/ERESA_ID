@@ -21,7 +21,7 @@
     <title>Contact - Eresa.id</title>
 </head>
 <body>
-    <x-testnavbar />
+    <x-navbar />
 
 <!-- HERO SECTION -->
 <section class="hero-section text-center">
@@ -128,7 +128,7 @@
 </section>
 
 <!-- FOOTER -->
-	<x-testfooter />
+	<x-footer />
 
 <!-- AOS Library JS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

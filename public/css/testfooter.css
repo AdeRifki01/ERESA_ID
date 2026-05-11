@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .footer-agency {
     background: #f8f8f8;
     padding-top: 70px;
@@ -86,8 +90,7 @@
 .footer-main ul {
     padding-left: 0 !important;
     list-style: none;
-    display: inline-block; /* Agar list bisa mengikuti alignment induknya */
-    text-align: center;
+    text-align: left;
 }
 
 .footer-main ul li {
@@ -131,7 +134,7 @@
     height: 260px;
     margin-top: -5px;
     border: 0;
-    border-radius: 18px;
+    border-radius: 10px;
     display: block;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
@@ -162,6 +165,14 @@
     .footer-social {
         justify-content: flex-start !important;
     }
+
+    /* Sejajarkan heading h5 (Home, Contact, Location) dengan teks Eresa.id */
+    .footer-main .footer-logo {
+        margin-top: 0;
+    }
+    .footer-main h5 {
+        margin-top: 0;
+    }
 }
 
 /* Menyesuaikan jarak ikon agar tetap rapi */
@@ -186,18 +197,25 @@
     }
 
     /* Memastikan teks tetap center di dalam kolomnya masing-masing */
-    .footer-main h5,
-    .footer-main ul,
-    .footer-logo,
-    .footer-desc {
+    .footer-main .footer-logo,
+    .footer-main .footer-desc {
         text-align: center !important;
     }
 
-    /* Hilangkan padding kiri pada UL agar tidak mendorong teks ke kanan */
-    .footer-main ul {
+    /* Kolom Home dan Contact: blok di tengah, teks rata kiri */
+    .footer-main .col-6 {
+        text-align: center !important;
+    }
+    .footer-main .col-6 h5 {
+        display: inline-block;
+        text-align: left !important;
+        width: auto;
+    }
+    .footer-main .col-6 ul {
+        display: inline-block;
+        text-align: left !important;
         padding-left: 0 !important;
-        margin: 0 auto;
-        display: block;
+        margin: 0;
     }
 
     .footer-social {

@@ -1,0 +1,86 @@
+.anim-floating {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.anim-floating:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3) !important;
+}
+.carousel-item img {
+    transition: transform 0.5s ease;
+}
+.carousel-item:hover img {
+    transform: scale(1.02);
+}
+
+/* ===================================
+   RESPONSIVE SETTINGS
+=================================== */
+
+/* Hero Styling */
+.hero-content {
+    padding-top: 150px;
+}
+
+.hero-title {
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Brand Images Styling */
+.brand-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Mobile Adjustments (max-width: 768px) */
+@media (max-width: 768px) {
+    .hero-content {
+        padding-top: 100px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-desc {
+        font-size: 0.95rem;
+    }
+
+    .brand-img {
+        max-width: 200px;
+    }
+
+    .carousel-inner img {
+        max-height: 300px !important;
+    }
+}
+
+/* Extra Small Devices (max-width: 576px) */
+@media (max-width: 576px) {
+    .hero-content {
+        padding-top: 80px;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .btn-outline-light {
+        width: 100%;
+        margin: 5px 0 !important;
+    }
+}
