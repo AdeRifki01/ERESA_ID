@@ -27,8 +27,8 @@
 <!-- GALLERY -->
     <section class="bg-light d-flex align-items-center" style="min-height:100vh; padding-top:1px;">
         <div class="container" style="margin-top:100px;">
-            <h2 class="text-center fw-bold mb-4" data-aos="fade-up">Gallery</h2>
-<!-- FILTER BUTTON -->
+            <h2 class="text-center fw-bold mb-2" data-aos="fade-up">Gallery</h2>
+    <!-- FILTER BUTTON -->
             <div class="text-center mb-4" data-aos="fade-up" data-aos-delay="100">
                 <button class="btn border-0 bg-transparent fw-bold me-3 filter-btn active-btn"
                     onclick="filterGallery('all', this)">
@@ -166,7 +166,7 @@
 <!-- FOOTER -->
 	<x-footer />
 
-<!-- MODAL LIGHTBOX -->
+<!-- DROPDOWN PORTOFOLIO -->
     <div class="modal fade" id="portoModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content bg-transparent border-0">

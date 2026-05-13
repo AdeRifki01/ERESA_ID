@@ -21,7 +21,7 @@ $current_year = date("Y");
             <!-- Tetap gunakan justify-content-center untuk row utama -->
             <div class="row g-4 text-center text-lg-start">      
                 <!-- Brand/Logo (Full width di mobile agar di atas) -->
-                <div class="col-12 col-lg-3 px-3">
+                <div class="col-12 col-lg-3 px-3 footer-reveal footer-delay-1">
                     <h2 class="footer-logo">{{ $company_name }}</h2>
                     <p class="footer-desc">{{ $tagline }}</p>
                     <div class="footer-social">
@@ -32,7 +32,7 @@ $current_year = date("Y");
                 </div>
 
                 <!-- Kolom Home -->
-                <div class="col-6 col-lg-2 px-3">
+                <div class="col-6 col-lg-2 px-3 footer-reveal footer-delay-2">
                     <h5 class="footer-title-link-style">
                         <a href="{{ route('home') }}" class="footer-title-link">
                             <i class="bi bi-house-door me-2"></i>Home
@@ -69,7 +69,7 @@ $current_year = date("Y");
                 </div>
 
                 <!-- Kolom Contact (Gunakan col-6 agar bersebelahan dengan Home) -->
-                <div class="col-6 col-lg-3 px-3">
+                <div class="col-6 col-lg-3 px-3 footer-reveal footer-delay-3">
                     <h5 class="footer-title-link-style">
                         <a href="{{ route('contact') }}" class="footer-title-link">
                             <i class="bi bi-telephone me-2"></i>Contact
@@ -97,7 +97,7 @@ $current_year = date("Y");
                 </div>
 
                 <!-- Location (Full width di mobile agar di bawah) -->
-                <div class="col-12 col-lg-4 px-4">
+                <div class="col-12 col-lg-4 px-4 footer-reveal footer-delay-4">
                     <h5><i class="bi bi-pin-map me-2"></i>Location</h5>
                     <div class="footer-map">
                         <iframe
@@ -121,3 +121,19 @@ $current_year = date("Y");
 			</p>
 		</div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const footerReveal = document.querySelectorAll('.footer-reveal');
+    const footerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+    footerReveal.forEach(el => footerObserver.observe(el));
+    });
+</script>

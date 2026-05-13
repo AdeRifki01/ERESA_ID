@@ -318,22 +318,17 @@ body {
 .retail-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 50px;
+    gap: 20px;
+    margin-top: 20px;
 }
 
-.retail-grid .price-card {
-    padding: 35px 24px;
-    border-radius: 24px;
-    background: #ffffff;
-    border: 1px solid #f1f5f9;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.retail-grid .price-card:hover {
-    border-color: var(--primary-blue);
-    background: #fcfdff;
+.retail-grid-foto {
+    display: grid;
+    /* Menggunakan 1fr untuk membagi rata tanpa batasan pixel minimal yang kaku */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
 }
 
 .retail-grid .icon-box {
@@ -542,5 +537,182 @@ body {
     }
     .price-card.highlight:hover {
         transform: translateY(-10px);
+    }
+}
+
+/* =========================
+   GLOBAL ANIMATION
+========================= */
+
+.price-card,
+.btn-nav-price,
+.btn-price,
+.category-header,
+.pricing-header h1,
+.pricing-header p {
+    transition: all 0.4s ease;
+}
+
+/* =========================
+   HERO ANIMATION
+========================= */
+
+.pricing-header h1 {
+    animation: fadeDown 1s ease;
+}
+
+.pricing-header p {
+    animation: fadeUp 1.2s ease;
+}
+
+.nav-pricing {
+    animation: fadeUp 1.4s ease;
+}
+
+/* =========================
+   CARD ANIMATION
+========================= */
+
+.price-card {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: cardShow 0.8s ease forwards;
+}
+
+.price-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.price-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.price-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.price-card:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+/* Hover Glow */
+.price-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow:
+        0 25px 60px rgba(61, 134, 246, 0.25),
+        0 0 25px rgba(61, 134, 246, 0.2);
+}
+
+/* Floating Effect */
+.price-card.highlight {
+    animation:
+        floating 3s ease-in-out infinite,
+        cardShow 1s ease forwards;
+}
+
+/* =========================
+   BUTTON EFFECT
+========================= */
+
+.btn-price {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-price::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-20deg);
+    transition: 0.6s;
+}
+
+.btn-price:hover::before {
+    left: 120%;
+}
+
+.btn-price:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   NAVIGATION PILLS
+========================= */
+
+.btn-nav-price:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* =========================
+   CATEGORY TITLE
+========================= */
+
+.category-header h3 {
+    position: relative;
+    display: inline-block;
+}
+
+.category-header h3::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 0;
+    height: 3px;
+    background: var(--primary-blue);
+    transition: 0.5s;
+    transform: translateX(-50%);
+}
+
+.category-header:hover h3::after {
+    width: 100%;
+}
+
+/* =========================
+   KEYFRAMES
+========================= */
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardShow {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }

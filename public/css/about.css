@@ -1,3 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ANIMASI FLOATING & HOVER */
 .anim-floating {
     transition:
         transform 0.3s ease,
@@ -22,20 +34,45 @@
    RESPONSIVE SETTINGS
 =================================== */
 
+.hero-section {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("../img/eresa/ECS_landscape.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
+}
 /* Hero Styling */
 .hero-content {
-    padding-top: 150px;
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+
+.hero-content {
+    padding-top: 280px;
 }
 
 .hero-title {
-    font-weight: 800;
-    font-size: 2.5rem;
+    font-weight: 800px;
+    font-size: 2rem;
 }
 
+/* DESC */
 .hero-desc {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.9;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Brand Images Styling */

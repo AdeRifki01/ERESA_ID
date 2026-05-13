@@ -16,6 +16,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/price.css') }}">
@@ -31,8 +32,11 @@
 <section class="pricing-hero">
     <div class="pricing-header text-center">
         <div class="container" data-aos="fade-up">
-            <h1 class="mb-3">Simple, Transparent Pricing</h1>
-            <p class="mx-auto" style="max-width: 650px;">Pilih rencana yang sesuai dengan kebutuhan bisnis dan anggaran Anda tanpa biaya tersembunyi.</p>
+            <h1 class="mb-3 fw-bold" style="font-size: 40px;">Wujudkan Ide Anda dengan <span style="color: #0066ffff;">Paket yang Fleksibel</span></h1>
+            <p class="mx-auto" style="max-width: 800px;">
+                Mulai dari konten harian hingga strategi branding menyeluruh,
+                kami menyediakan berbagai pilihan paket tanpa biaya tambahan yang tidak perlu.
+            </p>
             
             <div class="nav-pricing">
                 <a href="#utama" class="btn-nav-price" style="color: #3d86f6;">Layanan Utama</a>
@@ -56,11 +60,11 @@
                     <div class="usage-info"><i class="bi bi-laptop"></i> Pondasi branding kuat</div>
                     <hr class="divider">
                     <ul class="price-list">
-                        <li><i class="bi bi-check-circle"></i> Riset & Rencana konten</li>
-                        <li><i class="bi bi-check-circle"></i> Branding</li>
-                        <li><i class="bi bi-check-circle"></i> Produksi Konten: 17 Feed, 10 Story, & 4 Video (inc. VO & Talent)</li>
-                        <li><i class="bi bi-check-circle"></i> Operasional: Admin, posting, & koordinasi grup</li>
-                        <li><i class="bi bi-check-circle"></i> Evaluasi: Laporan bulanan & 2x revisi minor</li>
+                        <li><i class="bi bi-check-circle"></i> Riset & Rencana konten.</li>
+                        <li><i class="bi bi-check-circle"></i> Branding.</li>
+                        <li><i class="bi bi-check-circle"></i> Produksi Konten: 17 Feed, 10 Story, & 4 Video (inc. VO & Talent).</li>
+                        <li><i class="bi bi-check-circle"></i> Operasional: Admin, posting, & koordinasi grup.</li>
+                        <li><i class="bi bi-check-circle"></i> Evaluasi: Laporan bulanan & 2x revisi minor.</li>
                     </ul>
                 </div>
             </div>
@@ -75,11 +79,11 @@
                     <div class="usage-info"><i class="bi bi-rocket-takeoff"></i> Strategi iklan & video masif</div>
                     <hr class="divider">
                     <ul class="price-list">
-                        <li><i class="bi bi-check-circle"></i> Riset & Strategi: Analisis audiens, tren, kompetitor, dan optimasi profil</li>
-                        <li><i class="bi bi-check-circle"></i> Konten Visual: 45 Feed, 30 Story (19 gambar, 11 video), dan 15 Reels/TikTok</li>
-                        <li><i class="bi bi-check-circle"></i> Produksi Kreatif: Talent, Voice Over, naskah SEO, dan free shoot 6 jam</li>
-                        <li><i class="bi bi-check-circle"></i> Pertumbuhan Akun: Manajemen komunitas, akuisisi pengikut, dan iklan (Ads) Rp2 Juta</li>
-                        <li><i class="bi bi-check-circle"></i> Pelaporan & Evaluasi: Laporan detail, meeting evaluasi, dan grup koordinasi. Laporan bulanan dengan 3x revisi mayor</li>
+                        <li><i class="bi bi-check-circle"></i> Riset & Strategi: Analisis audiens, tren, kompetitor, dan optimasi profil.</li>
+                        <li><i class="bi bi-check-circle"></i> Konten Visual: 45 Feed, 30 Story (19 gambar, 11 video), dan 15 Reels/TikTok.</li>
+                        <li><i class="bi bi-check-circle"></i> Produksi Kreatif: Talent, Voice Over, naskah SEO, dan free shoot 6 jam.</li>
+                        <li><i class="bi bi-check-circle"></i> Pertumbuhan Akun: Manajemen komunitas, akuisisi pengikut, dan iklan (Ads) Rp2 Juta.</li>
+                        <li><i class="bi bi-check-circle"></i> Pelaporan & Evaluasi: Laporan detail, meeting evaluasi, dan grup koordinasi. Laporan bulanan dengan 3x revisi mayor.</li>
                     </ul>
                 </div>
             </div>
@@ -94,11 +98,11 @@
                     <div class="usage-info"><i class="bi bi-graph-up-arrow"></i> Optimasi interaksi audiens</div>
                     <hr class="divider">
                     <ul class="price-list">
-                        <li><i class="bi bi-check-circle"></i> Riset & Strategi: Analisis mendalam, monthly plan, dan optimasi profil</li>
-                        <li><i class="bi bi-check-circle"></i> Produksi Konten: 22 Feed, 16 Story (10 statis, 6 video), dan 8 Reels / TikTok</li>
-                        <li><i class="bi bi-check-circle"></i> Manajemen: Posting, admin, dan kelola Ads (1 jt)</li>
-                        <li><i class="bi bi-check-circle"></i> Laporan: Laporan detail, meeting evaluasi, dan grup koordinasi</li>
-                        <li><i class="bi bi-check-circle"></i> Revisi: Maksimal 2x revisi mayor</li>
+                        <li><i class="bi bi-check-circle"></i> Riset & Strategi: Analisis mendalam, monthly plan, dan optimasi profil.</li>
+                        <li><i class="bi bi-check-circle"></i> Produksi Konten: 22 Feed, 16 Story (10 statis, 6 video), dan 8 Reels / TikTok.</li>
+                        <li><i class="bi bi-check-circle"></i> Manajemen: Posting, admin, dan kelola Ads (1 jt).</li>
+                        <li><i class="bi bi-check-circle"></i> Laporan: Laporan detail, meeting evaluasi, dan grup koordinasi.</li>
+                        <li><i class="bi bi-check-circle"></i> Revisi: Maksimal 2x revisi mayor.</li>
                     </ul>
                 </div>
             </div>
@@ -124,24 +128,24 @@
                         <span class="num">1,500</span>
                         <span class="cents">,000</span>
                     </div>
-                    <div class="retail-highlight">26 Feeds Design</div>
+                    <div class="retail-highlight">Max 4 Slide</div>
                     <div class="retail-features">
-                        Idea & Concept, Caption & Hastag, Manage upload daily, Free Mirroring 1 Story.
+                        26 Feeds Carousel Design Premium, Idea & Concept, Caption & Hastag, Manage upload daily, Free Mirroring 1 Story.
                     </div>
                     <a href="https://wa.me/6285117618858?text=Halo%20Admin%20Eresa%2C%20saya%20tertarik%20dengan%20Bundling%20Package%3A%20Desain%20Feed%20Carousel.%20Mohon%20info%20lebih%20lanjut." class="btn-price" target="_blank">Order Now</a>
                 </div>
 
                 <!-- Bundling 2 -->
                 <div class="price-card retail-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="card-badge">COMBO FEED & REELS</div>
+                    <div class="card-badge">FEED & REELS</div>
                     <div class="retail-price">
                         <span class="rp">RP</span>
                         <span class="num">2,000</span>
                         <span class="cents">,000</span>
                     </div>
-                    <div class="retail-highlight">20 Feeds & 3 Reels</div>
+                    <div class="retail-highlight">Combo</div>
                     <div class="retail-features">
-                        Idea & Concept Editing, Caption & Hastag, Music & Text Motion, Manage upload daily, Free Mirroring 2 Story.
+                        20 Feeds Design Premium, 3 Video Reels/VT, Idea & Concept Editing, Caption & Hastag, Music & Text Motion, Manage upload daily.
                     </div>
                     <a href="https://wa.me/6285117618858?text=Halo%20Admin%20Eresa%2C%20saya%20tertarik%20dengan%20Bundling%20Package%3A%20Combo%20Feed%20%26%20Reels.%20Mohon%20info%20lebih%20lanjut." class="btn-price" target="_blank">Order Now</a>
                 </div>
@@ -154,9 +158,9 @@
                         <span class="num">2,500</span>
                         <span class="cents">,000</span>
                     </div>
-                    <div class="retail-highlight">11 Video Reels</div>
+                    <div class="retail-highlight">Max 1 Menit</div>
                     <div class="retail-features">
-                        Idea & Concept Editing, 2 Talent, Free Visit, Music & Text Motion, Caption & Hastag, Manage upload daily.
+                        11 Video Reels / VT, Idea & Concept Editing, 2 Talent, Free Visit, Music & Text Motion, Caption & Hastag, Manage upload daily.
                     </div>
                     <a href="https://wa.me/6285117618858?text=Halo%20Admin%20Eresa%2C%20saya%20tertarik%20dengan%20Bundling%20Package%3A%20Video%20Reels%20(Max%201%20Menit).%20Mohon%20info%20lebih%20lanjut." class="btn-price" target="_blank">Order Now</a>
                 </div>
@@ -177,15 +181,15 @@
             <div class="retail-grid d-flex flex-wrap justify-content-center">
                 <!-- Promo 1 -->
                 <div class="price-card retail-card" style="max-width: 400px; width: 100%;" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="card-badge">NEW CLIENT</div>
+                    <div class="card-badge">DESAIN FEED NEW CLIENT</div>
                     <div class="retail-price">
                         <span class="rp">RP</span>
                         <span class="num">1,000</span>
                         <span class="cents">,000</span>
                     </div>
-                    <div class="retail-highlight">24 Single Feeds</div>
+                    <div class="retail-highlight">Desain Feed</div>
                     <div class="retail-features">
-                        Design Premium, Idea & Concept khusus untuk klien baru yang ingin memulai branding.
+                        24 Single Feed Design Premium, Idea & Concept.
                     </div>
                     <a href="https://wa.me/6285117618858?text=Halo%20Admin%20Eresa%2C%20saya%20tertarik%20dengan%20Promo%20Package%3A%20Desain%20Feed%20New%20Client.%20Mohon%20info%20lebih%20lanjut." class="btn-price" target="_blank">Order Now</a>
                 </div>
@@ -198,9 +202,9 @@
                         <span class="num">300</span>
                         <span class="cents">,000</span>
                     </div>
-                    <div class="retail-highlight">9 Feeds & 9 Story</div>
+                    <div class="retail-highlight">Desain Feed</div>
                     <div class="retail-features">
-                        Design Premium, Idea & Concept, Caption & Hastag untuk kebutuhan rutin.
+                        9 Single Feed Design Premium, 9 Story, Idea & Concept, Caption & Hastag.
                     </div>
                     <a href="https://wa.me/6285117618858?text=Halo%20Admin%20Eresa%2C%20saya%20tertarik%20dengan%20Promo%20Package%3A%20Desain%20Feed%20Standard.%20Mohon%20info%20lebih%20lanjut." class="btn-price" target="_blank">Order Now</a>
                 </div>
@@ -218,7 +222,7 @@
                 <div class="underline"></div>
                 <p>Abadikan produk Anda dengan kualitas studio profesional untuk hasil yang memikat.</p>
             </div>
-            <div class="retail-grid">
+            <div class="retail-grid-foto">
                 <!-- Foto 1 -->
                 <div class="price-card retail-card" data-aos="zoom-in" data-aos-delay="600">
                     <div class="card-badge">BASIC</div>
@@ -285,26 +289,31 @@
 
 
 <section class="py-5 bg-light">
-        <div class="container text-center" style="max-width:900px;">
-            <h2 class="fw-bold text-primary">
-                Kamu tertarik? Ayo Segera Hubungi Kami
-            </h2>
-
-            <p class="text-muted mt-3">
-                Jangan di lihat aja, Ayo pesan paketnya sekarang juga!
-            </p>
-            
-            <a href="https://wa.me/6285117618858" class="btn btn-primary mt-3 rounded-pill px-4">
-                GET A QUOTE
-            </a>
-        </div>
-    </section>
+    <div class="container text-center" style="max-width:900px;">
+        <h2 class="fw-bold text-primary">
+            Kamu tertarik? Ayo Segera Hubungi Kami
+        </h2>
+        <p class="text-muted mt-3">
+            Jangan di lihat aja, Ayo pesan paketnya sekarang juga!
+        </p>
+        <a href="https://wa.me/6285117618858" class="btn btn-primary mt-3 rounded-pill px-4">
+            GET A QUOTE
+        </a>
+    </div>
+</section>
 
 <!-- FOOTER -->
 	<x-footer />
 
 <!-- SCRIPT -->
-	<script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+    });
+
 	function setPlan(button) {
 		// ambil semua button
 		let buttons = document.querySelectorAll('.toggle-wrapper button');
@@ -315,6 +324,6 @@
 		// kasih active ke yang diklik
 		button.classList.add('active');
 	}
-	</script>
+</script>
 </body>
 </html>

@@ -14,30 +14,28 @@ section {
 .hero-section {
     position: relative;
     min-height: 100vh;
-    min-height: 100dvh; /* Mencegah jump/zoom saat bar alamat browser sembunyi/tampil */
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: none;
+    overflow: hidden;
     color: #fff;
 }
 
 .hero-section::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background:
-        linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(26, 26, 46, 0.5)),
+        linear-gradient(135deg, rgba(0, 0, 0, 0.45), rgba(26, 26, 46, 0.55)),
         var(--bg-desktop);
     background-size: cover;
-    background-position: center var(--hero-parallax, center);
-    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(var(--hero-offset, 0px)) scale(1.05);
+    transition: transform 0.15s linear;
+    will-change: transform;
     z-index: 1;
 }
 
@@ -47,7 +45,7 @@ section {
 }
 
 .slogan {
-    padding-top: 300px;
+    padding-top: 200px;
     font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: 1px;
@@ -56,7 +54,7 @@ section {
 
 .description {
     font-size: 1.05rem;
-    max-width: 620px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.7;
@@ -114,9 +112,9 @@ section {
 
 .penawaran-desc {
     color: #666;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.8;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -139,6 +137,12 @@ section {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(26, 26, 46, 0.3);
 }
+
+/* .text-muted-custom {
+    color: #666 !important;
+    opacity: 0.7;
+    font-size: 0.5rem;
+} */
 
 /* ===== VIDEO SECTION ===== */
 .video-wrapper {
@@ -586,13 +590,15 @@ section {
     }
 
     .hero-section::before {
-        background-attachment: scroll;
-        background-image:
+        background:
             linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(26, 26, 46, 0.6)),
             var(--bg-mobile);
-        /* Mencegah zoom dengan membuat background sedikit lebih tinggi dari container */
-        height: 110%;
-        top: -5%;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        transform: none !important;
     }
 
     .slogan {
@@ -787,4 +793,27 @@ section {
 /* ===== SMOOTH SCROLL ===== */
 html {
     scroll-behavior: smooth;
+}
+
+/* ===== PERFORMANCE FIX ===== */
+
+.hero-section,
+.portfolio-row,
+.logo-track,
+.service-card,
+.reveal {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+/* Hindari lag animasi */
+.portfolio-track,
+.logo-track {
+    will-change: transform;
+}
+
+/* Fix flicker mobile */
+img {
+    -webkit-user-drag: none;
+    user-select: none;
 }
