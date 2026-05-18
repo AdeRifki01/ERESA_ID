@@ -3,8 +3,8 @@
         <div class="container">
 
             <!-- HEADER -->
-            <div class="d-flex justify-content-between align-items-center flex-wrap mb-5">
-                <h4 class="mb-0">Layanan Kreatif Yang Kami Hadirkan Untuk Anda?</h4>
+            <div class="d-flex justify-content-center align-items-center flex-wrap mb-5">
+                <h4 class="mb-0 text-center">Layanan Kreatif Yang Kami Hadirkan Untuk Anda?</h4>
                 <a href="{{ route('portofolio') }}" class="btn btn-dark fw-bold mt-2 mt-md-0">
                     Lihat Portofolio Kami
                 </a>

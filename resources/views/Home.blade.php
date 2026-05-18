@@ -18,7 +18,7 @@
     <!-- Judul Halaman -->
     <title>Home - Eresa.id</title>
 </head>
-<body>
+<body style="overflow-x: hidden; font-family: poppins, sans-serif;">
 <!-- Navbar -->
     <x-navbar /> 
 <!-- HERO -->

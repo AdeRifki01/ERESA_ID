@@ -207,13 +207,13 @@ html {
         text-align: center !important;
     }
     .footer-main .col-6 h5 {
-        display: inline-block;
-        text-align: left !important;
-        width: auto;
+        display: block;
+        text-align: center !important;
+        width: 100%;
     }
     .footer-main .col-6 ul {
-        display: inline-block;
-        text-align: left !important;
+        display: block;
+        text-align: center !important;
         padding-left: 0 !important;
         margin: 0;
     }

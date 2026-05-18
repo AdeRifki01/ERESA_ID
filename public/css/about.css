@@ -5,7 +5,6 @@
 html,
 body {
     overflow-x: hidden;
-    width: 100%;
     font-family: "Poppins", sans-serif;
 }
 
@@ -34,42 +33,6 @@ body {
    RESPONSIVE SETTINGS
 =================================== */
 
-.hero-section {
-    min-height: 100vh;
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("../img/eresa/ECS_landscape.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    position: relative;
-    overflow: hidden;
-}
-/* Hero Styling */
-.hero-content {
-    padding-top: 120px;
-    padding-bottom: 40px;
-}
-
-.hero-content {
-    padding-top: 280px;
-}
-
-.hero-title {
-    font-weight: 800px;
-    font-size: 2rem;
-}
-
-/* DESC */
-.hero-desc {
-    max-width: 850px;
-    margin: auto;
-    line-height: 1.9;
-
-    color: rgba(255, 255, 255, 0.9);
-}
-
 .navbar {
     width: 100%;
     overflow-x: hidden;
@@ -85,39 +48,11 @@ body {
 
 /* Mobile Adjustments (max-width: 768px) */
 @media (max-width: 768px) {
-    .hero-content {
-        padding-top: 100px;
-    }
-
-    .hero-title {
-        font-size: 1.8rem;
-    }
-
-    .hero-desc {
-        font-size: 0.95rem;
-    }
-
     .brand-img {
         max-width: 200px;
     }
 
     .carousel-inner img {
         max-height: 300px !important;
-    }
-}
-
-/* Extra Small Devices (max-width: 576px) */
-@media (max-width: 576px) {
-    .hero-content {
-        padding-top: 80px;
-    }
-
-    .hero-title {
-        font-size: 1.5rem;
-    }
-
-    .btn-outline-light {
-        width: 100%;
-        margin: 5px 0 !important;
     }
 }

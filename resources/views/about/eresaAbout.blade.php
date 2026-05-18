@@ -16,6 +16,7 @@
                     </p>
                 </div>
 
+                
                 <!-- KANAN (SLIDER CLEAN) -->
                 <div class="col-lg-6" data-aos="fade-left">
                     <div id="carouselAbout" class="carousel slide" data-bs-ride="carousel">
