@@ -97,29 +97,18 @@
                 <h2 class="fw-bold mb-3">Get In Touch</h2>
                 <p class="text-muted small mb-4">We would love to hear about your project and help you grow your business online.</p>
 
-                <form action="#" method="POST">
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <input type="text" class="form-control custom-input" placeholder="Name">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="email" class="form-control custom-input" placeholder="Email Address">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="phone" class="form-control custom-input" placeholder="Phone Number">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control custom-input" placeholder="Company Name">
-                        </div>
-                        <div class="col-12">
-                            <textarea class="form-control custom-input" rows="5" placeholder="Message"></textarea>
-                        </div>
-                        <div class="col-12 mt-4">
-                            <button type="submit" class="btn btn-blue rounded-pill px-4 py-2">
-                                Send Message <i class="bi bi-arrow-up-right-circle ms-2"></i>
-                            </button>
-                        </div>
-                    </div>
+                {{-- Container untuk notifikasi JavaScript --}}
+                <div id="notifContainer"></div>
+
+                <form id="contactForm">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <input type="text" id="phone" name="phone" placeholder="Phone Number">
+                    <input type="text" id="company" name="company" placeholder="Company Name">
+                    <input type="text" id="subject" name="subject" placeholder="Subject">
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    
+                    <button type="submit" id="submitBtn">Send Message</button>
                 </form>
             </div>
         </div>
@@ -135,6 +124,80 @@
     AOS.init({
         duration: 1000, // Durasi animasi (1 detik)
         once: true,     // Animasi hanya berjalan sekali saat scroll
+    });
+
+    async function sendContactMessage(formData) {
+        const API_URL = 'http://192.168.0.175:8000/api/contact';
+        const API_KEY = 'e998855f7028bd60b0046a201009cbf1afe1f7116c7ea134397f7b165e1850fc';
+        const submitBtn = document.getElementById('submitBtn');
+        const notifContainer = document.getElementById('notifContainer');
+
+        // Loading state
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Mengirim...';
+        notifContainer.innerHTML = '';
+
+        try {
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-API-Key': API_KEY,
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    phone: formData.phone || null,
+                    company: formData.company || null,
+                    subject: formData.subject || null,
+                    message: formData.message,
+                }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                notifContainer.innerHTML = `
+                    <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
+                        <i class="bi bi-check-circle-fill me-2"></i> Pesan berhasil dikirim! Terima kasih telah menghubungi kami.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>`;
+                document.getElementById('contactForm').reset();
+            } else {
+                console.error('Error:', data);
+                notifContainer.innerHTML = `
+                    <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i> Gagal mengirim pesan: ${data.message || 'Terjadi kesalahan.'}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>`;
+            }
+        } catch (error) {
+            console.error('Connection Error:', error);
+            notifContainer.innerHTML = `
+                <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i> Tidak dapat terhubung ke server. Silakan coba lagi nanti.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>`;
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+        }
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            company: document.getElementById('company').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value,
+        };
+        
+        sendContactMessage(formData);
     });
 </script>
 </body>

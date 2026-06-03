@@ -20,7 +20,8 @@
 </head>
 <body style="overflow-x: hidden; font-family: poppins, sans-serif;">
 <!-- Navbar -->
-    <x-navbar /> 
+    <x-navbar />
+
 <!-- HERO -->
     @include('home.heroHome')
 

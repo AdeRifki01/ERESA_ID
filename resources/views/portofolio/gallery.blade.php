@@ -64,7 +64,7 @@
 
 <!-- GALLERY -->
     <section class="bg-light d-flex align-items-center" style="min-height:100vh; padding-top:1px;">
-        <div class="container" style="margin-top:100px;">
+        <div class="container" style="margin-top:150px;">
             <h2 class="text-center fw-bold mb-2" data-aos="fade-up">Gallery</h2>
     <!-- FILTER BUTTON -->
             <div class="text-center mb-4" data-aos="fade-up" data-aos-delay="100">

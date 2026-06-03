@@ -13,7 +13,7 @@
                                 <h6 class="fw-bold mb-1">Social Media Management</h6>
                                 <br>
                                 <p class="text-muted mb-0" style="font-size:12px; line-height:1.5;">
-                                    Eksis & Terpercaya Kelola konten dan interaksi audiens secara profesional untuk bangun loyalitas pelanggan setiap hari.
+                                    Tingkatkan interaksi dan loyalitas audiens Anda melalui pengelolaan konten media sosial yang konsisten dan profesional.
                                 </p>
                             </div>
                         </div>
@@ -25,10 +25,10 @@
                         style="transition:0.3s; border-radius:15px;">
                         <div class="d-flex align-items-center">
                             <div class="ms-3">
-                                <h6 class="fw-bold mb-1">Social Media Management</h6>
+                                <h6 class="fw-bold mb-1">Website & SEO</h6>
                                 <br>
                                 <p class="text-muted mb-0" style="font-size:12px; line-height:1.5;">
-                                    Eksis & Terpercaya Kelola konten dan interaksi audiens secara profesional untuk bangun loyalitas pelanggan setiap hari.
+                                    Bangun profil digital dengan website berkinerja tinggi yang responsif, didukung optimasi SEO untuk mendominasi Google.
                                 </p>
                             </div>
                         </div>
@@ -40,10 +40,10 @@
                         style="transition:0.3s; border-radius:15px;">
                         <div class="d-flex align-items-center">
                             <div class="ms-3">
-                                <h6 class="fw-bold mb-1">Social Media Management</h6>
+                                <h6 class="fw-bold mb-1">Branding & Design</h6>
                                 <br>
                                 <p class="text-muted mb-0" style="font-size:12px; line-height:1.5;">
-                                    Eksis & Terpercaya Kelola konten dan interaksi audiens secara profesional untuk bangun loyalitas pelanggan setiap hari.
+                                    Ciptakan identitas visual yang khas. Kami merancang logo dan aset desain yang mencerminkan karakter unik brand Anda.
                                 </p>
                             </div>
                         </div>
@@ -55,10 +55,10 @@
                         style="transition:0.3s; border-radius:15px;">
                         <div class="d-flex align-items-center">
                             <div class="ms-3">
-                                <h6 class="fw-bold mb-1">Social Media Management</h6>
+                                <h6 class="fw-bold mb-1">Digital Marketing</h6>
                                 <br>
                                 <p class="text-muted mb-0" style="font-size:12px; line-height:1.5;">
-                                    Eksis & Terpercaya Kelola konten dan interaksi audiens secara profesional untuk bangun loyalitas pelanggan setiap hari.
+                                    Maksimalkan jangkauan pasar dan konversi dengan strategi iklan yang tepat sasaran di Facebook, Instagram, dan Google Ads.
                                 </p>
                             </div>
                         </div>
@@ -70,10 +70,10 @@
                         style="transition:0.3s; border-radius:15px;">
                         <div class="d-flex align-items-center">
                             <div class="ms-3">
-                                <h6 class="fw-bold mb-1">Social Media Management</h6>
+                                <h6 class="fw-bold mb-1">Content Creation</h6>
                                 <br>
                                 <p class="text-muted mb-0" style="font-size:12px; line-height:1.5;">
-                                    Eksis & Terpercaya Kelola konten dan interaksi audiens secara profesional untuk bangun loyalitas pelanggan setiap hari.
+                                    Produksi aset visual berkualitas tinggi, dari fotografi produk hingga video promosi yang siap memikat perhatian pelanggan.
                                 </p>
                             </div>
                         </div>
@@ -85,10 +85,10 @@
                         style="transition:0.3s; border-radius:15px;">
                         <div class="d-flex align-items-center">
                             <div class="ms-3">
-                                <h6 class="fw-bold mb-1">Social Media Management</h6>
+                                <h6 class="fw-bold mb-1">Business Strategy</h6>
                                 <br>
                                 <p class="text-muted mb-0" style="font-size:12px; line-height:1.5;">
-                                    Eksis & Terpercaya Kelola konten dan interaksi audiens secara profesional untuk bangun loyalitas pelanggan setiap hari.
+                                    Dapatkan panduan strategis berbasis data untuk mengembangkan bisnis Anda, mulai dari riset pasar hingga eksekusi kampanye.
                                 </p>
                             </div>
                         </div>
